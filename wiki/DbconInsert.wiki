@@ -1,4 +1,4 @@
-#labels Phase-Implementation,Featured
+#labels Phase-Implementation
 = Insert =
 *This method will allow you to insert into you database*
 
