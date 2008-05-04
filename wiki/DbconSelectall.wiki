@@ -1,0 +1,24 @@
+#labels Phase-Implementation
+= Select All =
+*This method will get all records from a table.*
+
+=== How to use ===
+This method needs two items:
+ # The table name that you will be selecting items from
+ # The columns you want returned
+
+This method will only do a 'mysql_query', to display the data you will need to use the function 'mysql_fetch_array'.
+
+Below is how to use:
+
+{{{
+$db = new dbcon;
+
+$select = $db->selectall('accounts','all');
+
+while($row = mysql_fetch_array($select)) {
+   print $row['firstname'];
+}
+}}}
+
+The above code will output the column value of 'firstname'.
