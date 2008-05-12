@@ -1,7 +1,8 @@
 <?php
 /*
  * Winn Database Class for PostgreSQL
- * - v1.0.1
+ * NOT SUPPORTED YET
+ * - v1.0.2
  */
 define('DBHOST','localhost');
 define('DBNAME','database name');
@@ -33,6 +34,17 @@ class dbcon {
 			$cols[] = $value . $comma;
 		}
 		pg_query('INSERT INTO ' . $table . ' SET ' . $cols);
+	}
+	
+	function update($table,$vars,$id) {
+		$t = sizeof($vars);
+		$i = 0;
+		foreach($vars AS $value) {
+			$i += 1;
+			$i == $t ? $comma = '' : $comma = ',';
+			$cols[] = $value . $comma;
+		}
+		pg_query('UPDATE ' . $table . ' SET ' . $cols . ' WHERE id=' . $id);
 	}
 }
 ?>
