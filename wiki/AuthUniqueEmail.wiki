@@ -1,0 +1,18 @@
+#labels Phase-Implementation
+= Authorization uniqueness of email =
+This auth method will allow you to check users email address to your current database. You may set a variable to tell the class if the user is new or the user is editing the information.
+
+
+Below is how to call and use the method:
+
+{{{
+$auth = new auth();
+
+// For new users
+$auth->validates_uniqueness_of_email('email@testemail.tld','new');
+// Will return 'TRUE' is the email address is not is use.
+
+// For current users
+$auth->validates_uniqueness_of_email('email@testemail.tld','edit');
+// Will return 'TRUE' is the email address is not is use.
+}}}
