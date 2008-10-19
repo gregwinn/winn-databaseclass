@@ -10,9 +10,9 @@ $auth = new auth();
 
 // For new users
 $auth->validates_uniqueness_of_email('email@testemail.tld','new');
-// Will return 'TRUE' is the email address is not is use.
+// Will return 'TRUE' if the email address is not is use.
 
 // For current users
 $auth->validates_uniqueness_of_email('email@testemail.tld','edit');
-// Will return 'TRUE' is the email address is not is use.
+// Will return 'TRUE' if the email address is not is use.
 }}}
