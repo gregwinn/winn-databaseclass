@@ -25,7 +25,7 @@ $auth->validates_uniqueness_of_email('email@testemail.tld','edit');
 || 1 || test@test.com ||
 || 2 || test2@test.com ||
 
-*NEW*
+==== NEW ====
 First this will try to validate an email address that is in the database for a new user.
 {{{
 $Val = $auth->validates_uniqueness_of_email('test@test.com','new');
@@ -42,7 +42,7 @@ TRUE
 }}}
 Output is TRUE and the user adds the email to the database.
 
-*EDIT*
+==== EDIT ====
 Now lets change my address from 'test@test.com' to test3@test.com using edit.
 {{{
 $MyCurrentEmail = 'test@test.com';
